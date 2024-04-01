@@ -17,7 +17,8 @@ const index = async (req, res) => {
     }).exec()
 
     const result = allData.filter(item => item.createBy !== null);
-    res.send(result)
+    console.log(result);
+    res.json(result);
 }
 
 const addMany = async (req, res) => {

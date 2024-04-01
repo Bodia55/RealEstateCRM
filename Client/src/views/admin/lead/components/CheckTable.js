@@ -271,10 +271,13 @@ export default function CheckTable(props) {
 
   return (
     <>
-      <Card
-        direction="column"
-        w="100%"
-        overflowX={{ sm: "scroll", lg: "hidden" }}
+      <div
+        style={{
+          backgroundColor: "white",
+          paddingBlock: "2rem",
+          paddingInline: "2rem",
+          borderRadius: "2rem"
+        }}
       >
         <Grid templateColumns="repeat(12, 1fr)" mb={3} gap={4}>
           <GridItem colSpan={8} >
@@ -584,7 +587,7 @@ export default function CheckTable(props) {
         <Edit isOpen={edit} size={size} selectedId={selectedId} setSelectedId={setSelectedId} onClose={setEdit} setAction={setAction} />
         <ImportModal text='Lead file' fetchData={fetchData} isOpen={isImportLead} onClose={setIsImportLead} />
 
-      </Card>
+      </div>
       {/* Advance filter */}
       <Modal onClose={() => { setAdvaceSearch(false); resetForm() }} isOpen={advaceSearch} isCentered>
         <ModalOverlay />

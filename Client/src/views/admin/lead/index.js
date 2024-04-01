@@ -49,7 +49,7 @@ const Index = () => {
         <div>
             <Grid templateColumns="repeat(6, 1fr)" mb={3} gap={4}>
                 <GridItem colSpan={6}>
-                    <CheckTable
+                    <CheckTable 
                         isLoding={isLoding}
                         columnsData={tableColumns}
                         isOpen={isOpen}
